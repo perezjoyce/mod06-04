@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MOD06-04: Looping / Iteration</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+
+	<h1 id="result1">
+		ACTIVITY 1: Display multiples of 10 from 10 to 100<br>
+	</h1>
+
+	<hr>
+
+	<h1 id="result2">
+		ACTIVITY 2: Display all numbers divisible by 3 and 5 from 1 to 50<br>
+	</h1>
+	
+	<hr>
+
+	<h1>
+		ACTIVITY 3: Sum of all ODD numbers from 1 - 50<br>
+		<span id="result3"></span>
+	</h1>
+	
+	<hr>
+
+	<h1>OUTPUT
+		ACTIVITY 4: Sum of all EVEN numbers from 1 - 50<br>
+		<span id="result4"></span>
+	</h1>
+
+
+
+
+	<script type="text/javascript">
+		// let num = 1;
+
+		// 1. WHILE LOOP SYNTAX
+		// while(num <= 10){
+		// 	document.getElementById('result').innerHTML += num + "<br>";
+		// 	num++; // super important; avoids INFINITE LOOP
+		// }
+
+		// 2. DO-WHILE SYNTAX
+		// do{
+		// 	document.getElementById('result').innerHTML += num + "<br>";
+		// 	num++;
+		// }while(num <= 3);
+
+
+		// 3. FOR-LOOP SYNTAX
+		//for(initialization; comparison; increment/decrement)
+		// for(let num = 1; num <= 10; num++){
+		// 	document.getElementById('result').innerHTML += num + "<br>";
+		// }
+
+		//for multiples of 3
+		// for(let num = 1; num <= 10; num+=3){
+		// 	document.getElementById('result').innerHTML += num + "<br>";
+		// }
+
+		// 1. ACTIVITY 1: Display multiples of 10 from 10 to 100
+		for(let num = 10; num <= 100; num+=10){
+			document.getElementById('result1').innerHTML += num + "<br>";
+		}
+
+		//2. ACTIVITY 2: Display all numbers divisible by 3 and 5 from 1 to 50
+
+		// let num = 0;
+		// let num5 = parseInt(num / 5);
+		// let num15 = parseInt(num / 15);
+		
+		for(let num = 15; num <= 50; num +=15){
+		document.getElementById('result2').innerHTML += num + "<br>";
+		}
+
+		
+
+		// 3. ACTIVITY 3: Sum of all ODD numbers from 1 - 50 = 625		
+
+		let sum = 0;
+
+		for(let num = 1; num <= 50; num += 1){
+			if (num % 2 == 1) {
+				sum += num;{
+					document.getElementById('result3').innerHTML = sum;
+				}
+			}
+
+		}
+
+		//4. ACTIVITY 4: Sum of all EVEN numbers from 1 - 50 = 650
+
+		// redeclare or else value of previous sum will be carried over
+		let sum2= 0;
+
+		for(let num = 2; num <= 50; num += 2){
+			if (num % 2 == 0) {
+				sum2 += num; {
+					document.getElementById('result4').innerHTML = sum2;
+					}
+			}
+		}
+		
+		
+
+	</script>
+
+
+	<!-- <script type="text/javascript" src="assets/js/script.js"></script> -->
+</body>
+</html>
